@@ -3,7 +3,7 @@ services:
   web:
     image: php:7.4-apache
     ports:
-      - "87:13"
+      - "13:87"
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -15,5 +15,15 @@ services:
     environment:
       MYSQL_DATABASE: ecommerce
       MYSQL_USER: root
-      MYSQL_PASSWORD:
-      MYSQL_ROOT_PASSWORD:
+      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: 123@123Aa
+  phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  container_name: phpmyadmin
+  ports:
+  - '13:87'
+  restart: always
+  environmet:
+  PMA_HOST: db
+  depends_on:
+  - db
