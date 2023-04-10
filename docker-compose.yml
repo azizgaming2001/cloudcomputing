@@ -3,7 +3,7 @@ services:
   web:
     image: php:7.4-apache
     ports:
-      - "13:87"
+      - "80:80"
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -21,7 +21,7 @@ services:
   image: phpmyadmin/phpmyadmin
   container_name: phpmyadmin
   ports:
-  - '13:87'
+  - '80:80'
   restart: always
   environmet:
   PMA_HOST: db
