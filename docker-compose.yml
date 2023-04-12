@@ -20,7 +20,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: online
-      MYSQL_USER: dbuser
+      MYSQL_USER: root
       MYSQL_PASSWORD: dbPass@123
       MYSQL_ROOT_PASSWORD: 123@123Aa
     volumes:
